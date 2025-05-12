@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#game-area {
+    width: 600px; /* Or make it responsive */
+    height: 400px;
+    border: 2px solid #333;
+    position: relative; /* Important for positioning circles */
+    background-color: #eee;
+    margin: 20px auto;
+    overflow: hidden; /* Prevents circles from showing scrollbars if partially outside */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    position: absolute; /* Positioned relative to game-area */
+    cursor: pointer;
+    transition: background-color 0.2s; /* For hover effect */
+}
+
+.circle:hover {
+    background-color: lightskyblue;
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#login-section, #game-section, #leaderboard-section {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}

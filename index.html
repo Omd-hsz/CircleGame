@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Circle Clicker</h1>
+
+        <!-- Login Section (initially hidden, for Phase 2) -->
+        <div id="login-section">
+            <h2>Login / Register</h2>
+            <input type="text" id="username" placeholder="Username (for display)">
+            <input type="email" id="email" placeholder="Email (for login)">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+            <p id="auth-status"></p>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game-section" style="display: none;"> <!-- Hidden until logged in -->
+            <p>Player: <span id="current-player"></span></p>
+            <button id="start-button">Start Game</button>
+            <div id="game-info">
+                <p>Time Left: <span id="time-left">60</span>s</p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <div id="game-area">
+                <!-- Circles will appear here -->
+            </div>
+            <button id="logout-btn" style="margin-top: 20px;">Logout</button>
+        </div>
+
+        <!-- Leaderboard Section (for Phase 2) -->
+        <div id="leaderboard-section" style="display: none;"> <!-- Hidden until logged in -->
+            <h2>Leaderboard</h2>
+            <ol id="leaderboard-list">
+                <!-- Scores will be listed here -->
+            </ol>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
